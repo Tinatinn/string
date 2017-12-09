@@ -1,0 +1,41 @@
+namespace ConsoleApplication19
+{
+    class Program
+        {
+
+             static bool isDigit(char c)
+            {
+               return c >= '0' && c <= '9';
+            }
+
+            static bool isLetter(char c)
+            {
+                return c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z';
+            }
+    
+        static void Main(string[] args)
+        {
+            int digit = 0;
+            int letter = 0;
+            int other = 0;
+            string input = Console.ReadLine();
+            Console.WriteLine("Input is: {0}", input);
+            foreach(char c in input)
+            {
+                if (Program.isLetter(c))
+                {
+                    letter++;
+                }else if (Program.isDigit(c))
+                {
+                    digit++;
+                }
+                else
+                {
+                    other++;
+                }
+            }
+            Console.WriteLine("Letter: {0}, Digit: {1}, Other: {2}", letter,digit,other);
+
+        }
+    }
+}
