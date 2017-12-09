@@ -1,0 +1,2 @@
+# string
+Define inputted string
